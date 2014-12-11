@@ -1,0 +1,5 @@
+[package]
+
+name = "nirt"
+version = "0.0.1"
+authors = ["Mark Elias McDermott <mark.elias.mcdermott@gmail.com>"]
