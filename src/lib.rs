@@ -1,5 +1,4 @@
+#![feature(slicing_syntax)]
 
 
-pub fn max_message_size() -> u32 {
-    4
-}
+pub mod util;

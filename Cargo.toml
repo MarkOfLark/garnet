@@ -3,3 +3,10 @@
 name = "nirt"
 version = "0.0.1"
 authors = ["Mark Elias McDermott <mark.elias.mcdermott@gmail.com>"]
+
+[lib]
+name = "nirt"
+path = "src/lib.rs"
+
+[dependencies]
+lazy_static = "0.1.1"
