@@ -10,3 +10,14 @@
 
 
 pub mod util;
+
+pub struct Server {
+}
+
+pub struct Client {
+}
+
+impl Server {
+    pub fn new<P: ToIpPort>(port: P) -> IoResult<Server> {
+    }
+}

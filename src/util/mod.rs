@@ -70,3 +70,14 @@ pub fn max_message_size() -> u32 {
         global_max_message_size
     }
 }
+
+
+pub trait ToIpPort {
+    fn to_ip_port(&self) -> u16;
+}
+
+impl ToIpPort for u16 {
+    fn to_ip_port(&self) -> u16 { *self }
+}
+
+impl ToIpPort for
