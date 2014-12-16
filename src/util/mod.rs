@@ -7,7 +7,7 @@
 */
 
 use std::io::net::udp::UdpSocket;
-use std::io::net::ip::{Ipv4Addr, SocketAddr};
+use std::io::net::ip::{Ipv4Addr, SocketAddr, Port};
 use std::sync::{Once, ONCE_INIT};
 
 // This is not pretty but it is the best way I could find to have this computed once and only once.
@@ -73,11 +73,16 @@ pub fn max_message_size() -> u32 {
 
 
 pub trait ToIpPort {
-    fn to_ip_port(&self) -> u16;
+    fn to_ip_port(&self) -> Port;
 }
 
-impl ToIpPort for u16 {
-    fn to_ip_port(&self) -> u16 { *self }
+impl ToIpPort for Port {
+    fn to_ip_port(&self) -> Port { *self }
 }
 
-impl ToIpPort for
+impl<'p> ToIpPort for &'p str {
+    fn to_ip_port(&self) -> Port {
+        println!("{}",self)
+        0
+    }
+}
