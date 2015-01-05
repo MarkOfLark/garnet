@@ -1,2 +1,2 @@
-garnet
+GARNET
 ======
